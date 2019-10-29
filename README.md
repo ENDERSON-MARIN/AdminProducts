@@ -1,10 +1,10 @@
 # Project Title
 
 # Screenshot
-![](src/assets/images/crm.png)
-![](src/assets/images/light.png)
-![](src/assets/images/cosmic.png)
-![](src/assets/images/search.png)
+![](frontend/src/assets/images/dark.png)
+![](frontend/src/assets/images/light.png)
+![](frontend/src/assets/images/cosmic.png)
+![](frontend/src/assets/images/search.png)
 
 ## Getting Started
 ```
