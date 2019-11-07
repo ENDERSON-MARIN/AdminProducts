@@ -1,13 +1,18 @@
 import { NgModule } from '@angular/core';
 import { NbMenuModule } from '@nebular/theme';
+import { FormsModule } from '@angular/forms';
+
+import {NgxPaginationModule} from 'ngx-pagination';
 
 import { ThemeModule } from '../@theme/theme.module';
 import { PagesComponent } from './pages.component';
 import { DashboardModule } from './dashboard/dashboard.module';
-import { ECommerceModule } from './e-commerce/e-commerce.module';
 import { PagesRoutingModule } from './pages-routing.module';
 import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
-import { SipexComponent } from './sipex/sipex.component';
+
+
+
+
 
 @NgModule({
   imports: [
@@ -15,12 +20,15 @@ import { SipexComponent } from './sipex/sipex.component';
     ThemeModule,
     NbMenuModule,
     DashboardModule,
-    ECommerceModule,
     MiscellaneousModule,
+    FormsModule,
+    NgxPaginationModule
   ],
   declarations: [
-    PagesComponent,
-    SipexComponent,
+    PagesComponent
+   
+
+    
   ],
 })
 export class PagesModule {

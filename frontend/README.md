@@ -1,7 +1,7 @@
 # Project Title
 
 # Screenshot
-![](src/assets/images/crm.png)
+![](src/assets/images/dark.png)
 ![](src/assets/images/light.png)
 ![](src/assets/images/cosmic.png)
 ![](src/assets/images/search.png)
@@ -9,7 +9,7 @@
 ## Getting Started
 ```
 # The easiest way to get started is to clone the repository:
-git clone https://github.com/ENDERSON-MARIN/CRM-HERCAS.git
+git clone https://github.com/ENDERSON-MARIN/AdminProducts.git
 
 # Change directory
 cd /your_dir
@@ -28,10 +28,7 @@ http://localhost:4200
 
 you need to install following software 
 1)	Nodejs https://nodejs.org/en/download/
-2)	Express setup in nodejs application using pug template
-3)	Mongodb
-4)	Mongoose
-5)  Angular 8	
+2)  Angular 8	
 
 ### Project Structure
 

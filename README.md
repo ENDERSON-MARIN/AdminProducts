@@ -1,6 +1,6 @@
 # Project Title
 
-# Screenshot
+# Screenshots Themes
 ![](frontend/src/assets/images/dark.png)
 ![](frontend/src/assets/images/light.png)
 ![](frontend/src/assets/images/cosmic.png)
@@ -28,10 +28,7 @@ http://localhost:4200
 
 you need to install following software 
 1)	Nodejs https://nodejs.org/en/download/
-2)	Express setup in nodejs application using pug template
-3)	Mongodb
-4)	Mongoose
-5)  Angular 8	
+2)  Angular CLI 
 
 ### Project Structure
 

@@ -1,26 +1,22 @@
-/**
- * @license
- * Copyright Hercas Publicidad 2019. All Rights Reserved.
- * Licensed under the MIT License. See License.txt in the project root for license information.
- */
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-import { CoreModule } from './@core/core.module';
-import { ThemeModule } from './@theme/theme.module';
-import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
-import { NbPasswordAuthStrategy, NbAuthModule } from '@nebular/auth';
+import { BrowserModule } from "@angular/platform-browser";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { NgModule } from "@angular/core";
+import { HttpClientModule } from "@angular/common/http";
+import { FormsModule } from '@angular/forms';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { CoreModule } from "./@core/core.module";
+import { ThemeModule } from "./@theme/theme.module";
+import { AppComponent } from "./app.component";
+import { AppRoutingModule } from "./app-routing.module";
+import { NbPasswordAuthStrategy, NbAuthModule } from "@nebular/auth";
 import {
-  NbChatModule,
-  NbDatepickerModule,
   NbDialogModule,
   NbMenuModule,
   NbSidebarModule,
   NbToastrModule,
-  NbWindowModule,
-} from '@nebular/theme';
+  NbWindowModule
+} from "@nebular/theme";
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -29,30 +25,38 @@ import {
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
+    FormsModule,
+    NgxPaginationModule,
 
     ThemeModule.forRoot(),
 
     NbAuthModule.forRoot({
       strategies: [
         NbPasswordAuthStrategy.setup({
-          name: 'email',
-        }),
+          name: "email",
+
+          baseEndpoint: "",
+          login: {
+            // ...
+            endpoint: "/api/auth/login"
+          },
+          register: {
+            // ...
+            endpoint: "/api/auth/register"
+          }
+        })
       ],
-      forms: {},
-    }), 
+      forms: {}
+    }),
 
     NbSidebarModule.forRoot(),
     NbMenuModule.forRoot(),
-    NbDatepickerModule.forRoot(),
     NbDialogModule.forRoot(),
     NbWindowModule.forRoot(),
     NbToastrModule.forRoot(),
-    NbChatModule.forRoot({
-      messageGoogleMapKey: 'AIzaSyA_wNuCzia92MAmdLRzmqitRGvCF7wCZPY',
-    }),
-    CoreModule.forRoot(),
+
+    CoreModule.forRoot()
   ],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule {}

@@ -6,13 +6,3 @@ services:
     build: client # specify the directory of the Dockerfile
     ports:
       - "4200:4200" # specify port forewarding
-
-  express: #name of the second service
-    build: express-server # specify the directory of the Dockerfile
-    ports:
-      - "3000:3000" #specify ports forewarding
-
-  database: # name of the third service
-    image:  mysql # specify image to build container from
-    ports:
-      - "3306:3306" # specify port forewarding
